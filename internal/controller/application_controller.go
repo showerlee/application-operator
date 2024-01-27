@@ -69,7 +69,7 @@ func (r *ApplicationReconciler) Reconcile(ctx context.Context, req ctrl.Request)
 	for i := 0; i < int(app.Spec.Replicas); i++ {
 		pod := &corev1.Pod{
 			ObjectMeta: metav1.ObjectMeta{
-				Name:      fmt.Sprintf("$s-$d", app.Name, i),
+				Name:      fmt.Sprintf("%s-%d", app.Name, i),
 				Namespace: app.Namespace,
 				Labels:    app.Labels,
 			},
