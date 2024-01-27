@@ -30,7 +30,7 @@ type ApplicationSpec struct {
 	// Important: Run "make" to regenerate code after modifying this file
 
 	// Foo is an example field of Application. Edit application_types.go to remove/update
-	Replicas int32					`json:"replicas,omitempty"`
+	Replicas int32                  `json:"replicas,omitempty"`
 	Template corev1.PodTemplateSpec `json:"template,omitempty"`
 }
 
