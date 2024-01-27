@@ -55,7 +55,7 @@ func (r *ApplicationReconciler) Reconcile(ctx context.Context, req ctrl.Request)
 	l := log.FromContext(ctx)
 
 	// get the Application
-	app := &dappsv1.Application()
+	app := &dappsv1.Application{}
 	if err := r.Get(ctx, req.NamespacedName, app); err != nil {
 		if errors.IsNotFound(err) {
 			l.Info("the Application is not found")
