@@ -1,6 +1,0 @@
-domain: showerlee.com
-layout:
-- go.kubebuilder.io/v3
-projectName: application-operator
-repo: github.com/showerlee/application-operator
-version: "3"
